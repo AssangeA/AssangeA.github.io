@@ -13,7 +13,7 @@ timezone: ''
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-#url: https://www.mark726.club
+url: https://www.notes.worstone.cn
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -96,7 +96,7 @@ ignore:
 
 # Extensions
 ## Plugins: https://hexo.io/plugins/
-plugins_dir:
+plugins:
   hexo-generator-feed
 ## Themes: https://hexo.io/themes/
 theme: LiveForCode
@@ -105,7 +105,7 @@ theme: LiveForCode
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://github.com/AssangeA/AssangeA.github.io.git
+  repo: https://github.com/first19326/first19326.github.io.git
   branch: master
 
 # Feed Atom
