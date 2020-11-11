@@ -11,7 +11,7 @@ github:https://github.com/shw2018
 
 - 2.头像旋转https://www.cnblogs.com/xieqk/p/13503066.html
 
-- 3.免备案CDNhttps://shen-yu.gitee.io/
+- 3.免备案CDN https://shen-yu.gitee.io/
 
 - 4.到达顶部的小火煎https://zyj_yida.gitee.io/
 
