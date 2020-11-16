@@ -3,13 +3,13 @@
         GitHubUserName: "first19326",
         GitHubRepositories: "Hexo-LiveForCode",
         BlogUser: "LiveForCode",
-        BlogAvatar: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/sidebar/avatar.jpg",
+        BlogAvatar: "static/image/sidebar/avatar.jpg",
         BlogStartDate: "2020-01-01",
         WebsiteTitleBlur: "(◍´꒳`◍) Hi, Live For Code",
         WebsiteTitleBlurTimeOut: 500,
         WebsiteTitleFocus: "(*´∇｀*) 欢迎回来!",
         WebsiteTitleFocusTimeOut: 1000,
-        WebsiteFavicon: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/website/logo.png",
+        WebsiteFavicon: "static/image/website/logo.png",
         ProgressBar: {
             id: "topProgressBar",
             color: "#77B6FF",
@@ -77,14 +77,14 @@
             animateSections: true
         },
         HomeHeaderImage: [
-            "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/home.jpg"
+            "static/image/header/home.jpg"
         ],
         HomeBannerText: "",
         ArticleHeaderImage: [
-            "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/header/article.jpg"
+            "static/image/header/article.jpg"
         ],
         OtherBannerText: "",
-        MenuList : [
+        MenuList: [
             {
                 name: "首页",
                 href: "/",
@@ -92,7 +92,7 @@
                 class: ""
             }
         ],
-        MenuLink : [],
+        MenuLink: [],
         FooterStyle: 2,
         BottomText: {
             icon: "like-fill",
@@ -103,14 +103,14 @@
         ConsoleList: [],
         FontIconExtend: "",
         Donate: {
-            paypal : "",
+            paypal: "",
             bitcoin: "",
-            alipay : "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/alipay.png",
-            wechat : "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/wechat.png"
+            alipay: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/alipay.png",
+            wechat: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/image/donate/wechat.png"
         },
         Code: {
             style: "normal"
-        },    
+        },
         Search: {
             applicationID: "U8CZAW9G9Z",
             apiKey: "b479add179b24524aa5f8773e9694c62",
@@ -148,7 +148,7 @@
             scrollSmoothOffset: -5,
             positionFixedSelector: ".toc",
             positionFixedClass: "toc-fixed"
-        }, 
+        },
         Require: {
             baseUrl: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/",
             waitSeconds: 100
@@ -159,9 +159,9 @@
         APlayer: {
             container: ".aplayer",
             fixed: true,
-            autoplay: false, 
+            autoplay: false,
             loop: "all",
-            order: "random", 
+            order: "random",
             preload: "auto",
             volume: 0.67,
             mutex: true,
@@ -178,16 +178,16 @@
         },
         Meting: {
             setting: {
-                id: "3778678", 
-                lrcshow: false, 
-                server: "netease", 
-                type: "playlist", 
-                fixed: true, 
-                autoplay: false, 
-                loop: "all", 
-                order: "random", 
-                preload: "auto", 
-                volume: 0.67, 
+                id: "3778678",
+                lrcshow: false,
+                server: "netease",
+                type: "playlist",
+                fixed: true,
+                autoplay: false,
+                loop: "all",
+                order: "random",
+                preload: "auto",
+                volume: 0.67,
                 mutex: true
             }
         },
@@ -217,7 +217,8 @@
             loading: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/loading.js",
             meting: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/Meting.min.js",
             iscroll: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/iscroll.js",
-            require: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js"
+            require: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/js/require.min.js",
+            
         },
         Font: {
             LongCang: "https://cdn.jsdelivr.net/gh/first19326/hexo-liveforcode@master/static/font/LongCang.css",
@@ -241,7 +242,7 @@
     window.config = $.extend(true, window.defaultConfig, window.config);
 
     // Start Cache
-    $.ajaxSetup({cache: true});
+    $.ajaxSetup({ cache: true });
 
     // Load loading.js
     $.getScript(window.config.Script.loading, function () {
@@ -257,8 +258,8 @@
                     "ToProgress", "Rotate",
                     "SnapSvg", "Classie", "Menu", "Tools"
                 ];
-                require(staticResource, function() {
-                    require(["Base"], function() {
+                require(staticResource, function () {
+                    require(["Base"], function () {
                         (new Base).init();
                     });
                 });
