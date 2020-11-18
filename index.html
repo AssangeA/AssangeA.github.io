@@ -218,13 +218,16 @@
 
         </div>
     </div>
-    <div id="footer"></div>
+    <div id="footer">
+        <p>本站勉强运行 <span id="sitetime"></span></p>
+    </div>
     <div id="sidebar">
         <div class="menu-wrap" style="display:none;">
             <nav class="menu">
                 <div class="menu-introduce">
                     <div class="introduce-avatar"></div>
                     <div class="introduce-info">
+                       
                         <div class="introduce-user"><span></span></div>
                     </div>
                 </div>
@@ -247,6 +250,7 @@
     </div>
     <link type="text/css" rel="stylesheet" href="static/css/search.css">
     <script type="text/javascript" src="static/js/iscroll.js"></script>
+    <script src="static/js/runtime.js"></script>
     <script type="text/javascript" src="static/js/instantsearch.min.js"></script>
     <div class="search-window">
         <div class="search-content">
@@ -255,7 +259,7 @@
             </div>
             <div id="search-input" class="search-input"></div>
         </div>
-
+       
         <div class="search-scroll">
             <div class="search-result">
                 <div id="search-stats" class="search-stats"></div>
@@ -372,11 +376,11 @@
             BlogAvatar: 'static/image/sidebar/avatar.jpg',
             BlogStartDate: '2020-01-01',
 
-            WebsiteTitleBlur: '性感美女在线发牌',
+            WebsiteTitleBlur: '芜湖🚀🚀🚀',
             WebsiteTitleBlurTimeOut: 500,
             WebsiteTitleFocus: '(*´∇｀*) 欢迎回来!',
             WebsiteTitleFocusTimeOut: 1000,
-            WebsiteFavicon: 'static/image/website/logo.png',
+            WebsiteFavicon: 'static/image/sidebar/avatar.jpg',
 
             ProgressBar: {
                 id: 'topProgressBar',
@@ -460,7 +464,7 @@
             BackAnimation: {
                 colorSaturation: '60%',
                 colorBrightness: '50%',
-                colorAlpha: 0.5,
+                colorAlpha: 0.8,
                 colorCycleSpeed: 5,
                 verticalPosition: 'random',
                 horizontalSpeed: 200,
@@ -588,11 +592,11 @@
 
             FooterStyle: 2,
             BottomText: {
-                icon: 'like-fill',
+                icon: '',
                 left: '人生若只如初见',
                 right: '何事秋风悲画扇'
             },
-            ThemeInfo: true,
+            ThemeInfo: false,
 
             ConsoleList: [
 
@@ -841,6 +845,7 @@
             }
         };
     </script>
+    
     <script type="text/javascript" src="static/js/index.js"></script>
 </body>
 
