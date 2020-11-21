@@ -111,7 +111,8 @@
           that.color = randomColor();
         }
         else {
-          that.color = settings.color;
+          that.color = randomColor();
+          // that.color = settings.color;
         }
       }
 

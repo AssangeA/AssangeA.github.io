@@ -142,19 +142,19 @@ function Base() {
 
         // 设置头部底部按钮
         if (homeScroll <= docScroll) {
-            toUpDownI.rotate({animateTo:0});
-            toUpDown.attr('data', 'up');
-            toUpDownSpan.text('返回顶部');
+            // toUpDownI.rotate({animateTo:0});
+            // toUpDown.attr('data', 'up');
+            // toUpDownSpan.text('返回顶部');
         } else {
             toUpDownI.rotate({animateTo:-180});
-            toUpDown.attr('data', 'down');
-            toUpDownSpan.text('跳至底部');
+            // toUpDown.attr('data', 'down');
+            // toUpDownSpan.text('跳至底部');
 
             // 如果滚动到页面底部，则设置为返回顶部
             if (docScroll == (docHeight - windowHeight)) {
-                toUpDownI.rotate({animateTo:0});
-                toUpDown.attr('data', 'up');
-                toUpDownSpan.text('返回顶部');
+                // toUpDownI.rotate({animateTo:0});
+                // toUpDown.attr('data', 'up');
+                // toUpDownSpan.text('返回顶部');
             }
         }
 
@@ -163,24 +163,23 @@ function Base() {
             // 向下滚动
             // 滚过头图
             if (homeScroll <= docScroll) { 
-
+                script.setWrapRightStatus();
                 // 设置菜单按钮
-                if (!openButton.hasClass('menu-button-scroll')) {
-                    openButton.addClass('menu-button-scroll');
-                    openButton.text('');
-                }
+                // if (!openButton.hasClass('menu-button-scroll')) {
+                //     openButton.addClass('menu-button-scroll');
+                //     openButton.text('');
+                // }
             }
 
         } else { 
             // 向上滚动
             // 滚入头图
             if (homeScroll >= docScroll) { 
-
                 // 设置菜单按钮
-                if (openButton.hasClass('menu-button-scroll')) {
-                    openButton.removeClass('menu-button-scroll');
-                    openButton.text('MENU');
-                }
+                // if (openButton.hasClass('menu-button-scroll')) {
+                //     openButton.removeClass('menu-button-scroll');
+                //     openButton.text('MENU');
+                // }
             }
         }
 
@@ -239,9 +238,9 @@ function Base() {
                     if (ac === 'down') {
                         let docHeight    = $(document).height();
                         let windowHeight = $(window).height();
-                        tools.actScroll(docHeight - windowHeight, 2000)
+                        tools.actScroll(docHeight - windowHeight, 1000)
                     } else {
-                        tools.actScroll(0, 2000)
+                        tools.actScroll(0, 1000)
                     }
                 }
             }
@@ -252,11 +251,18 @@ function Base() {
      * 右下角菜单状态设置
      */
     this.setWrapRightStatus = function() {
-        $('.wrap-right').fadeIn(300);
-        clearTimeout(wrapRightTimer);
+      
+        // $('.wrap-right').fadeIn(300);
+        // clearTimeout(wrapRightTimer);
         wrapRightTimer = setTimeout(function() {
-            $('.wrap-right').fadeOut(300);
-        }, 5000);
+            // $('.wrap-right').fadeOut(300);
+              $('.wrap-right ').animate({bottom:'6rem'})
+              clearTimeout(wrapRightTimer);
+        }, 1000);
+    }
+
+    this.setWrapRightStatusToBottom=function(){
+        $('.wrap-right ').animate({bottom:'-5rem'})
     }
 
     /**
@@ -616,14 +622,16 @@ function Base() {
         const wrapRight = $('.wrap-right');
         if (wrapRight.length > 0) {
 
+            //小火箭
             // 添加上下滚动
-            let upDownHtml = '<div class="up-down" data="up"><span>返回顶部</span><div><i class="iconfont icon-top"></i></div></div>';
+            // let upDownHtml = '<div class="up-down" data="up"><span>返回顶部</span><div><i class="iconfont icon-top"></i></div></div>';
+            let upDownHtml=`<div class="back-to-ceiling up-down" style="right: 1rem;  width: 4rem; height: 4rem;    box-shadow: 0 1px 6px 0 rgba(0,0,0,.2); border-radius: 0.25rem; line-height: 2.5rem;" data-v-c6073ba8=""><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8=""><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8=""></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8=""></path></svg></div>`
             wrapRight.prepend(upDownHtml);
             script.wrapRightMous('.up-down', '.up-down span');
 
             // 添加关注
             let attHtml = '<div class="attention" switch="false"><span>关注</span><i class="iconfont icon-like"></i></div>';
-            wrapRight.prepend(attHtml);
+            // wrapRight.prepend(attHtml);
 
             script.wrapRightMous('.attention', '.attention span');
             // 触发一次滚动处理，防止未有对象，初始化失败

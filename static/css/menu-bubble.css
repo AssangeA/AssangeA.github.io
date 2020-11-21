@@ -175,6 +175,7 @@ body{
 	top: 0;
 	left: 0;
     z-index: 1;
+    background: url('../image/header/back.jpg') no-repeat center;
     width: 280px;
     height: 225px;
     color: #F5F5F5;
@@ -185,6 +186,7 @@ body{
 	transition: opacity .3s,transform .3s;
 	-webkit-transition-delay: .4s;
     transition-delay: .4s;
+   
 }
 
 .introduce-avatar {

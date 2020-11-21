@@ -2210,14 +2210,39 @@ b {
 	display: none
 }
 
+/* .back-to-ceiling[data-v-c6073ba8] {
+    background-color: #fff;
+    background-color: var(--background-color);
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
+    position: fixed;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+} */
+
+.back-to-ceiling .icon[data-v-c6073ba8] {
+    /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    margin: 7px;
+    /* width: 26px;
+	height: 26px; */
+	width: 2.5rem;
+	height: 2.5rem;
+    fill: #3eaf7c;
+}
+
 .attention, .up-down {
 	cursor: pointer;
 	color: #555;
-	opacity: .5;
+	/* opacity: .5; */
 	filter: Alpha(opacity=50);
 	-webkit-transition: all .5s ease-out;
 	transition: all .5s ease-out;
-	position: relative
+	position: relative;
 }
 
 .attention {
