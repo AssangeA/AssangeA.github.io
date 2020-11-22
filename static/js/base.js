@@ -461,7 +461,7 @@ function Base() {
     this.addFooter = function() {
         const footer = $('#footer');
 
-        footer.append('<div><span class="face">ღゝ◡╹)ノ♡</span></div>');
+        footer.append('<div><span class="face">ღゝ◡╹)ノ♡疾风知劲草</span></div>');
 
         if (window.config.BottomText.left || window.config.BottomText.right)
             footer.append('<div>【' + window.config.BottomText.left + '<span><i class="iconfont icon-' + window.config.BottomText.icon + '"></i></span>' + window.config.BottomText.right + '】</div>');
